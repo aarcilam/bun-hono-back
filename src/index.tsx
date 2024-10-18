@@ -1,8 +1,11 @@
 import { Hono } from "hono";
 import user from "./routes/user";
 import { FC } from "hono/jsx";
+import db from "./helpers/database";
 
 const app = new Hono();
+
+const database = db;
 
 const Top: FC<{ messages: string[] }> = (props: {
   messages: string[];
